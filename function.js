@@ -15,10 +15,10 @@ var requestOptions = {
   if (address.value === undefined) return undefined;
   let number = address.value;
 
-   const response = await fetch
+   const response2 = await fetch
   (`https://randomuser.me/api/?results=${number}`);
 
-  const response2 = await fetch("https://google.serper.dev/search", requestOptions)
+  const response = await fetch("https://google.serper.dev/search", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
