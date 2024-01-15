@@ -1,4 +1,4 @@
-{
+[{
   "kind": "column",
   "name": "Get Latitud & Longitud",
   "description": "Get the Latitud and Longitud of an address",
@@ -13,4 +13,4 @@
   "result": {
     "type": "string"
   }
-}
+}]
