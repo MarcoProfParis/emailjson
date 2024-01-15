@@ -1,5 +1,4 @@
-window.function = function (number) {
-
+window.getData = async function (number) {
   try {
     const response = await fetch(`https://randomuser.me/api/?results=${number}`);
     
@@ -13,5 +12,4 @@ window.function = function (number) {
     console.error('Error fetching random user data:', error.message);
     return null;
   }
-
-}
+};
