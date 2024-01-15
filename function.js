@@ -1,4 +1,4 @@
-window.function = async function (number) {
+window.function = function (number) {
   try {
     const response = await fetch(`https://randomuser.me/api/?results=${number}`);
     
