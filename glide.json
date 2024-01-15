@@ -6,7 +6,7 @@
     "author": "Thinh Dinh <thinh@lowcode.agency>",
     "params": [
       {
-        "name": "name",
+        "number": "number",
         "displayName": "Number of results 1234",
         "type": "string"
       }
