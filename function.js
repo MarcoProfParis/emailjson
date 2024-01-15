@@ -18,10 +18,7 @@ var requestOptions = {
    const response2 = await fetch
   (`https://randomuser.me/api/?results=${number}`);
 
-  const response = await fetch(`https://google.serper.dev/search`, requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  const response = await fetch(`https://google.serper.dev/search`, requestOptions);
   
   const data = await response.json();
   const jsonString = JSON.stringify(data); // Convert the object to a JSON string
