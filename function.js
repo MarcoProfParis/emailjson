@@ -1,4 +1,4 @@
-window.getData = async function (number) {
+window.function = async function (number) {
   try {
     const response = await fetch(`https://randomuser.me/api/?results=${number}`);
     
@@ -16,6 +16,6 @@ window.getData = async function (number) {
 
 // Example usage
 const numberOfResults = 3;
-getData(numberOfResults).then(jsonData => {
-  console.log(jsonData);
+window.function(numberOfResults).then(jsonData => {
+  return jsonData;
 });
