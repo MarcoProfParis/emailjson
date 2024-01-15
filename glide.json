@@ -2,7 +2,7 @@
   {
     "kind": "column",
     "name": "Get first name",
-    "description": "Get first name from user's full name123",
+    "description": "Number of results",
     "author": "Thinh Dinh <thinh@lowcode.agency>",
     "params": [
       {
