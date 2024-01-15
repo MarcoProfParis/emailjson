@@ -8,7 +8,7 @@
       {
         "name": "number",
         "displayName": "Number of results",
-        "type": "number"
+        "type": "string"
       }
     ],
     "result": {
