@@ -7,7 +7,8 @@ window.function = function (number) {
     }
 
     const data = await response.json();
-    return data;
+    const jsonString = JSON.stringify(data);
+    return jsonString;
   } catch (error) {
     console.error('Error fetching random user data:', error.message);
     return null;
@@ -16,6 +17,6 @@ window.function = function (number) {
 
 // Example usage
 const numberOfResults = 3;
-window.function(numberOfResults).then(jsonData => {
-  return jsonData;
+window.function(numberOfResults).then(jsonString => {
+  return jsonString;
 });
