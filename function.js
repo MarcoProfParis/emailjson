@@ -1,7 +1,7 @@
 window.function = async function (address,apikey) {
   var myHeaders = new Headers();
   let apikeyvalue = apikey.value;
-myHeaders.append("X-API-KEY", "${apikeyvalue}");
+myHeaders.append("X-API-KEY", `${apikeyvalue}`);
 myHeaders.append("Content-Type", "application/json");
   var raw = JSON.stringify({
   "q": "apple inc"
