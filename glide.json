@@ -6,9 +6,9 @@
     "author": "Thinh Dinh <thinh@lowcode.agency>",
     "params": [
       {
-        "name": "name",
-        "displayName": "Name123",
-        "type": "string"
+        "name": "number",
+        "displayName": "Number of results",
+        "type": "number"
       }
     ],
     "result": {
