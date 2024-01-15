@@ -1,22 +1,12 @@
-window.function = function (number) {
-  try {
-    const response = await fetch(`https://randomuser.me/api/?results=${number}`);
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
+window.function = async function (address) {
+  
+  if (address.value === undefined) return undefined;
+  let adr = address.value;
 
-    const data = await response.json();
-    const jsonString = JSON.stringify(data);
-    return jsonString;
-  } catch (error) {
-    console.error('Error fetching random user data:', error.message);
-    return null;
-  }
-};
-
-// Example usage
-const numberOfResults = 3;
-window.function(numberOfResults).then(jsonString => {
-  return jsonString;
-});
+   const response = await fetch
+  (`https://maps.googleapis.com/maps/api/geocode/json?address=${adr}&key=Your API Key`);
+  
+  const data = await response.json();
+  return (`${data.results[0].geometry.location.lat}, ${data.results[0].geometry.location.lng}`);
+  
+}
