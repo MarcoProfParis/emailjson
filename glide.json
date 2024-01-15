@@ -1,18 +1,16 @@
-[
-  {
-    "kind": "column",
-    "name": "Get first name",
-    "description": "Number of results 123",
-    "author": "Thinh Dinh <thinh@lowcode.agency>",
-    "params": [
-      {
-        "number": "number",
-        "displayName": "Number of results 1234",
-        "type": "string"
-      }
-    ],
-    "result": {
+{
+  "kind": "column",
+  "name": "Get Latitud & Longitud",
+  "description": "Get the Latitud and Longitud of an address",
+  "author": "Santiago Perez",
+  "params": [
+    {
+      "name": "address",
+      "displayName": "Address",
       "type": "string"
     }
+  ],
+  "result": {
+    "type": "string"
   }
-]
+}
