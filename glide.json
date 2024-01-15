@@ -2,7 +2,7 @@
   {
     "kind": "column",
     "name": "Get first name",
-    "description": "Number of results",
+    "description": "Number of results 123",
     "author": "Thinh Dinh <thinh@lowcode.agency>",
     "params": [
       {
