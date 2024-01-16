@@ -8,11 +8,6 @@
       "name": "address",
       "displayName": "Address",
       "type": "string"
-    },
-    {
-      "name": "apikey",
-      "displayName": "apikey",
-      "type": "string"
     }
   ],
   "result": {
