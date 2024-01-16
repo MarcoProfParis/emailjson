@@ -1,8 +1,8 @@
 window.function = async function (code,recherche,webhook) {
   if (address.value === undefined) return undefined;
-let q1 = code.value;
-let recherche1 = recherche.value;
-let webhook1 = webhook.value;
+let q = code.value;
+let recherche = recherche.value;
+let webhook = webhook.value;
   const raw = JSON.stringify([
     {
         "params": {
@@ -28,7 +28,7 @@ let webhook1 = webhook.value;
     redirect: 'follow'
   };
 
-  let number = address.value;
+ 
 
   const response = await fetch(`https://hook.eu1.make.com/8v5egatxkxez2xthfj7qmq1h5nn4c7n7`, requestOptions);
     const data = await response.json();
