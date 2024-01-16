@@ -20,7 +20,7 @@ var requestOptions = {
   bodyType: 'raw',
   body: raw,
   contentType: 'application/json',
-  followRedirect: true
+  redirect: 'follow'
 };
   if (address.value === undefined) return undefined;
   let number = address.value;
