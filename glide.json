@@ -8,16 +8,6 @@
       "name": "code",
       "displayName": "code de recherche",
       "type": "number"
-    },
-    {
-      "name": "recherche",
-      "displayName": "recherche de susbstance",
-      "type": "string"
-    },
-    {
-      "name": "webhook",
-      "displayName": "url webhook",
-      "type": "string"
     }
   ],
   "result": {
