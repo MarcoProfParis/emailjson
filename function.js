@@ -8,11 +8,11 @@ let webhook = webhook.value;
         "params": {
             "q": {
                 "type": "number",
-                "value": 14
+                "value": q
             },
             "recherche": {
                 "type": "string",
-                "value": "Butanol"
+                "value": '${recherche}
             }
         }
     }
