@@ -1,4 +1,4 @@
-window.function = async function (code,url,recherche) {
+window.function = async function (codeapi,url,recherche) {
   if (url.value === undefined) return undefined;
   if (recherche.value === undefined) return undefined;
 let webhook = url.value;
@@ -7,8 +7,8 @@ let webhook = url.value;
     {
         "params": {
             "q": {
-                "type": "number",
-                "value": 42
+                "type": "string",
+                "value": codeapi.value
             },
             "recherche": {
                 "type": "string",
