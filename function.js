@@ -1,6 +1,8 @@
-window.function = async function (address) {
+window.function = async function (code,recherche,webhook) {
   if (address.value === undefined) return undefined;
-
+let q = code.value;
+let recherche = recherche.value;
+let webhook = webhook.value;
   const raw = JSON.stringify([
     {
         "params": {
