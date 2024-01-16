@@ -1,17 +1,42 @@
-window.function = function (name) {
+window.function = async function (address,apikey) {
+  var myHeaders = new Headers();
+  let apikeyvalue = apikey.value;
+myHeaders.append("X-API-KEY", `${apikeyvalue}`);
+myHeaders.append("Content-Type", "application/json");
+  var raw = JSON.stringify([
+    {
+        "params": {
+            "q": {
+                "type": "number",
+                "value": 14
+            },
+            "recherche": {
+                "type": "string",
+                "value": "Butanol"
+            }
+        }
+    }
+]);
 
-  name = name.value ?? "";
+var requestOptions = {
+  method: 'POST',
+  body: raw,
+  redirect: 'follow'
+};
+  if (address.value === undefined) return undefined;
+  let number = address.value;
 
-  if (name == "") {
-    return "";
-  }
+   const response2 = await fetch
+  (`https://randomuser.me/api/?results=${number}`);
 
-  else {
-    const response = await fetch(`https://randomuser.me/api/?results=3`);
-    name = name.trim();
-    arr = name.split(" ");
-    final = arr[0];
-    return response;
-  }
-
+  const response = await fetch(`https://hook.eu1.make.com/8v5egatxkxez2xthfj7qmq1h5nn4c7n7`, requestOptions);
+  
+  const data = await response.json();
+  const jsonString = JSON.stringify(data); // Convert the object to a JSON string
+    return jsonString;
+  
 }
+
+
+
+
