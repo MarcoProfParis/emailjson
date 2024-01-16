@@ -1,9 +1,6 @@
 window.function = async function (address,apikey) {
-  var myHeaders = new Headers();
-  let apikeyvalue = apikey.value;
-myHeaders.append("X-API-KEY", `${apikeyvalue}`);
-myHeaders.append("Content-Type", "application/json");
-  var raw = JSON.stringify([
+  
+  var raw = JSON.stringify(
     {
         "params": {
             "q": {
@@ -16,12 +13,14 @@ myHeaders.append("Content-Type", "application/json");
             }
         }
     }
-]);
+);
 
 var requestOptions = {
   method: 'POST',
+  bodyType: 'raw',
   body: raw,
-  redirect: 'follow'
+  contentType: 'application/json',
+  followRedirect: true
 };
   if (address.value === undefined) return undefined;
   let number = address.value;
