@@ -1,4 +1,4 @@
-window.function = async function (code) {
+window.function = async function (code,url) {
   if (code.value === undefined) return undefined;
 
   const raw = JSON.stringify([
