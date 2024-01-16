@@ -1,6 +1,6 @@
 window.function = async function (address,apikey) {
   
-  var raw = JSON.stringify(
+  var raw = JSON.stringify([
     {
         "params": {
             "q": {
@@ -12,7 +12,7 @@ window.function = async function (address,apikey) {
                 "value": "Butanol"
             }
         }
-    }
+    }]
 );
 
 var requestOptions = {
