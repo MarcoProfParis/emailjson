@@ -7,7 +7,7 @@
     {
       "name": "code",
       "displayName": "code de recherche",
-      "type": "string"
+      "type": "number"
     },
     {
       "name": "recherche",
