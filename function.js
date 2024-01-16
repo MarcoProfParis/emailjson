@@ -1,4 +1,4 @@
-window.myFunction = async function (address, apikey) {
+window.myFunction = async function (address) {
   if (address.value === undefined) return undefined;
 
   const raw = JSON.stringify([
