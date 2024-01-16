@@ -1,5 +1,5 @@
 window.function = async function (code,recherche,webhook) {
-  if (address.value === undefined) return undefined;
+  if (recherche.value === undefined) return undefined;
 let q = code.value;
 let recherche = recherche.value;
 let webhook = webhook.value;
