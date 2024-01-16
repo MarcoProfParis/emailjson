@@ -1,8 +1,6 @@
-window.function = async function (code,recherche,webhook) {
-  if (recherche.value === undefined) return undefined;
-let q = code.value;
-let recherche = recherche.value;
-let webhook = webhook.value;
+window.function = async function (code) {
+  if (code.value === undefined) return undefined;
+
   const raw = JSON.stringify([
     {
         "params": {
