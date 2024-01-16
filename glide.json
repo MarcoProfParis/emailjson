@@ -8,6 +8,11 @@
       "name": "code",
       "displayName": "code de recherche",
       "type": "number"
+    },
+    {
+      "name": "url",
+      "displayName": "webhook",
+      "type": "string"
     }
   ],
   "result": {
