@@ -13,11 +13,6 @@
       "name": "url",
       "displayName": "webhook",
       "type": "string"
-    },
-    {
-      "name": "recherche",
-      "displayName": "recherche",
-      "type": "string"
     }
   ],
   "result": {
