@@ -1,6 +1,6 @@
 window.function = async function (code,url) {
   if (code.value === undefined) return undefined;
-
+let webhook = url.value;
   const raw = JSON.stringify([
     {
         "params": {
@@ -28,7 +28,7 @@ window.function = async function (code,url) {
 
  
 
-  const response = await fetch(`https://hook.eu1.make.com/8v5egatxkxez2xthfj7qmq1h5nn4c7n7`, requestOptions);
+  const response = await fetch(`${webhook}`, requestOptions);
     const data = await response.json();
 
     const jsonString = JSON.stringify(data);
