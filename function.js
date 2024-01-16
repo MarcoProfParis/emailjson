@@ -1,5 +1,5 @@
 window.function = async function (code,url,recherche) {
-  if (code.value === undefined) return undefined;
+  if (recherche.value === undefined) return undefined;
 let webhook = url.value;
   let recherchevalue = recherche.value:
   const raw = JSON.stringify([
@@ -11,7 +11,7 @@ let webhook = url.value;
             },
             "recherche": {
                 "type": "string",
-                "value": recherchevalue
+                "value": recherche.value
             }
         }
     }
