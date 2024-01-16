@@ -1,22 +1,22 @@
 [{
   "kind": "column",
-  "name": "Get Latitud & Longitud",
-  "description": "Get the Latitud and Longitud of an address",
+  "name": "Webhook pour recherche CLP",
+  "description": "Vous avez besoin d'une clé API pour le site de recherche sur serper.dev",
   "author": "Santiago Perez",
   "params": [
     {
-      "name": "code",
-      "displayName": "code de recherche",
-      "type": "number"
+      "name": "codeapi",
+      "displayName": "Ici votre clé api pour le site serper.dev",
+      "type": "string"
     },
     {
       "name": "url",
-      "displayName": "webhook",
+      "displayName": "Ici l'url du webhook sur make",
       "type": "string"
     },
     {
       "name": "recherche",
-      "displayName": "recherche",
+      "displayName": "ici le nom ou numéro de cas de la substance recherché",
       "type": "string"
     }
   ],
