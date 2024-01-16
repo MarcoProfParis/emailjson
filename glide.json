@@ -5,8 +5,18 @@
   "author": "Santiago Perez",
   "params": [
     {
-      "name": "address",
-      "displayName": "Address",
+      "name": "code",
+      "displayName": "code de recherche",
+      "type": "string"
+    },
+    {
+      "name": "recherche",
+      "displayName": "recherche de susbstance",
+      "type": "string"
+    },
+    {
+      "name": "webhook",
+      "displayName": "url webhook",
       "type": "string"
     }
   ],
