@@ -17,7 +17,7 @@
     
     {
       "name": "recherche",
-      "displayName": "Recherche / CAS ou Nom | ici le nom ou numéro de cas de la substance recherché",
+      "displayName": "Recherche / CAS ou Nom | ici le nom ou numéro de cas de la substance recherchée",
       "type": "string"
     }
   ],
