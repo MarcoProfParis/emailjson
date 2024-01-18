@@ -1,22 +1,23 @@
 [{
   "kind": "column",
-  "name": "Webhook pour recherche CLP",
-  "description": "Vous avez besoin d'une clé API pour le site de recherche sur serper.dev",
-  "author": "Santiago Perez",
+  "name": "Module de recherche informations substance à partir du numéro CAS ou de son NOM",
+  "description": "Vous avez besoin d'indiquer l'url pour le webhook ainsi que la clé API de recherche que vous trouverez sur le site serper.dev en créant un compte",
+  "author": "Marc Olivier Reula",
   "params": [
     {
-      "name": "codeapi",
-      "displayName": "Ici votre clé api pour le site serper.dev",
+      "name": "url",
+      "displayName": "Step / 1 ▶️ webhook url | Ici l'url du webhook sur make",
       "type": "string"
     },
     {
-      "name": "url",
-      "displayName": "Ici l'url du webhook sur make",
+      "name": "codeapi",
+      "displayName": "Step / 2 ▶️ X-API-KEY | Ici votre clé api pour le site serper.dev ",
       "type": "string"
     },
+    
     {
       "name": "recherche",
-      "displayName": "ici le nom ou numéro de cas de la substance recherché",
+      "displayName": "Recherche / CAS ou Nom | ici le nom ou numéro de cas de la substance recherché",
       "type": "string"
     }
   ],
