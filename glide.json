@@ -6,18 +6,17 @@
   "params": [
     {
       "name": "url",
-      "displayName": "Step / 1 ▶️ webhook url | Ici l'url du webhook sur make",
+      "displayName": "Step / 1 ▶️ webhook url | Url du webhook sur make",
       "type": "string"
     },
     {
       "name": "codeapi",
-      "displayName": "Step / 2 ▶️ X-API-KEY | Ici votre clé api pour le site serper.dev ",
+      "displayName": "Step / 2 ▶️ X-API-KEY | Votre clé api pour le site serper.dev",
       "type": "string"
-    },
-    
+    },    
     {
       "name": "recherche",
-      "displayName": "Recherche / CAS ou Nom | ici le nom ou numéro de cas de la substance recherchée",
+      "displayName": "Recherche / CAS ou Nom | Nom ou numéro de cas de la substance recherchée",
       "type": "string"
     }
   ],
