@@ -1,4 +1,4 @@
-window.function = async function (codeapi,url,recherche) {
+window.function = async function (url,codeapi,recherche) {
   if (url.value === undefined) return undefined;
   if (recherche.value === undefined) return undefined;
 let webhook = url.value;
