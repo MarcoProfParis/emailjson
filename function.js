@@ -1,7 +1,7 @@
 window.function = async function(url,pwd,email) {
   if (url.value === undefined) return undefined;
   if (email.value === undefined) return undefined;
-  if (pwd.value === undefined) return undefined;
+  if (pwd.value === undefined) return "waiting";
 let webhook = url.value;
   const ch = email.value;
   const raw = JSON.stringify([
