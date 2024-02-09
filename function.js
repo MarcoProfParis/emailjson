@@ -35,5 +35,5 @@ let webhook = url.value;
     const data = await response.json();
 
     const jsonString = JSON.stringify(data);
-    return jsonString;
+    return data;
 };
