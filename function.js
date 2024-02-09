@@ -1,16 +1,16 @@
-window.function = async function(url,codeapi,recherche) {
+window.function = async function(url,pwd,email) {
   if (url.value === undefined) return undefined;
-  if (recherche.value === undefined) return undefined;
+  if (email.value === undefined) return undefined;
 let webhook = url.value;
-  const ch = recherche.value;
+  const ch = email.value;
   const raw = JSON.stringify([
     {
         "params": {
-            "q": {
+            "pwd": {
                 "type": "string",
-                "value": codeapi.value
+                "value": pwd.value
             },
-            "recherche": {
+            "email": {
                 "type": "string",
                 "value": ch
             }
