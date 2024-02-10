@@ -6,7 +6,7 @@
   "params": [
     {
       "name": "url",
-      "displayName": "webhook url email",
+      "displayName": "webhook url",
       "type": "string"
     },
     {
