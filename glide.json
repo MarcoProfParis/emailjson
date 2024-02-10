@@ -6,17 +6,17 @@
   "params": [
     {
       "name": "url",
-      "displayName": "webhook url",
+      "displayName": "webhook url email",
       "type": "string"
     },
     {
       "name": "pwd",
-      "displayName": "password",
+      "displayName": "password à faire passer",
       "type": "string"
     },    
     {
       "name": "email",
-      "displayName": "email",
+      "displayName": "email à transmettre",
       "type": "string"
     }
   ],
