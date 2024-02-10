@@ -13,7 +13,7 @@ window.function = async function(url, pwd, email) {
     });
 
     // Append the password as a query parameter to the webhook URL
-    webhook += `?password=${encodeURIComponent(pwd.value)}`;
+    webhook += `?pwd=${encodeURIComponent(pwd.value)}`;
 
     const requestOptions = {
         method: 'POST',
