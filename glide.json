@@ -1,6 +1,6 @@
-[{
+ [{
   "kind": "column",
-  "name": "Envoyer un mail avec un code",
+  "name": "recevoir un ok pour le code",
   "description": "",
   "author": "Marc Olivier Reula",
   "params": [
