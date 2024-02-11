@@ -1,7 +1,7 @@
 window.function = async function(url, pwd, email) {
     if (url.value === undefined) return undefined;
-    if (email.value === undefined) return undefined;
-    if (pwd.value === undefined) return "waiting";
+    if (email.value === undefined) return "Enter your emailpo";
+    if (pwd.value === undefined) return undefined;
 
     let webhook = url.value;
     const ch = email.value;
@@ -23,7 +23,7 @@ window.function = async function(url, pwd, email) {
         },
         redirect: 'follow'
     };
-
+//let data = "Please confirm your Email!!!";
     const response = await fetch(`${webhook}`, requestOptions);
     
   
