@@ -42,3 +42,17 @@ window.function = async function(json) {
         return "Webhook already triggered for this dataset.";
     }
 };
+
+function isValidUrl(url) {
+    try {
+        new URL(url);
+        return true;
+    } catch (error) {
+        return false;
+    }
+}
+
+// Function to introduce delay
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
