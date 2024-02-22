@@ -1,6 +1,6 @@
 window.function = async function(json) {
     // Check if json parameter is provided and contains the required fields
-    if (!json.check ) return "check is false";
+    if (json.check === false ) return "check is false";
 
     let webhook = json.webhook;
     const requestBody = {
