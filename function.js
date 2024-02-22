@@ -1,15 +1,10 @@
 window.function = async function(json) {
-    // Any asynchronous operations can be awaited here if needed
     const obj = JSON.parse(json);
     let url = obj.webhook;
-    return url.value;
+    return "Done " + url.value;
 };
 
-(async () => {
-    // Immediately invoke the function with an empty JSON object
-    const result = await window.function({});
-    console.log(result); // Output: {}
-})();
+
 window.function2 = async function(json) {
 const obj = JSON.parse(json);
 
