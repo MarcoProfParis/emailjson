@@ -1,11 +1,5 @@
 window.function = async function(json) {
-    let test = {
-  "webhook": "123",
-  "email": "prof@reula.fr",
-  "pwd": "1234567",
-  "date": "18/12/2024",
-  "check": false
-};
+    let test = json.value;
     console.log("Value of json.webhook:", test.webhook);
     let url = test.webhook;
     return url;
