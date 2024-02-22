@@ -1,6 +1,6 @@
 window.function = async function(json) {
     const obj = JSON.stringify(json);
-    return obj;
+    return obj.value;
 };
 window.function2 = async function(json) {
 const obj = JSON.parse(json);
