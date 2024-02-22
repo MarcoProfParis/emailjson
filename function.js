@@ -1,19 +1,18 @@
-window.function = async function(url, pwd, email) {
-    if (url.value === undefined) return undefined;
-    if (email.value === undefined) return "Enter your Email";
-    if (pwd.value === undefined) return undefined;
+window.function = async function(json) {
+    // Check if json parameter is provided and contains the required fields
+    if (!json || !json.1 || !json.2 || !json.3) return "Invalid JSON input";
 
-    let webhook = url.value;
-    const ch = email.value;
+    let webhook = json.1;
+    const ch = json.3;
     const raw = JSON.stringify({
         params: {
-            pwd: pwd.value,
+            pwd: json.2,
             email: ch
         }
     });
 
     // Append the password as a query parameter to the webhook URL
-    webhook += `?pwd=${encodeURIComponent(pwd.value)}`;
+    webhook += `?pwd=${encodeURIComponent(json.2)}`;
 
     const requestOptions = {
         method: 'POST',
