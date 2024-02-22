@@ -10,7 +10,8 @@ window.function = async function(json) {
 let obj = JSON.parse(json.value);
     console.log("Value of json.check:", obj.check);
 if (obj.check === false) return "Waiting for check";
-    let webhook = obj.webhook;
+    let url = obj.webhook;
+    console.log("Value of obj.webhook:", obj.webhook);
     const requestBody = {
         params: json
     };
@@ -21,7 +22,7 @@ if (obj.check === false) return "Waiting for check";
     
 
  await delay(5000);
-    return '${webhook}';
+    return url;
     const requestOptions = {
         method: 'POST',
         body: JSON.stringify(requestBody),
@@ -37,7 +38,7 @@ if (obj.check === false) return "Waiting for check";
         window.function.webhookTriggered = true;
 
         // Make the API call
-        const response = await fetch(`${webhook}`, requestOptions);
+        const response = await fetch(url, requestOptions);
 
         // Read the response body as plain text
         const data = await response.text();
