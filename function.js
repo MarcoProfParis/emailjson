@@ -1,4 +1,4 @@
-window.function = async function(json) {
+window.function2 = async function(json) {
     let test = JSON.parse(json.value);
     console.log("Value of json.webhook:", test.webhook);
     let url = test.webhook;
@@ -6,9 +6,10 @@ window.function = async function(json) {
 };
 
 
-window.function2 = async function(json) {
-const obj = JSON.parse(json);
-
+window.function = async function(json) {
+let obj = JSON.parse(json.value);
+    console.log("Value of json.check:", obj.check);
+if (obj.check === false) return "Waiting for check";
     let webhook = obj.webhook;
     const requestBody = {
         params: json
