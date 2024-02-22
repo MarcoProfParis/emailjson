@@ -5,18 +5,8 @@
   "author": "Marc Olivier Reula",
   "params": [
     {
-      "name": "url",
-      "displayName": "webhook url",
-      "type": "string"
-    },
-    {
-      "name": "pwd",
-      "displayName": "password à faire passer",
-      "type": "string"
-    },    
-    {
-      "name": "email",
-      "displayName": "email à transmettre",
+      "name": "json",
+      "displayName": "Json",
       "type": "string"
     }
   ],
