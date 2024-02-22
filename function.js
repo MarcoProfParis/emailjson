@@ -1,19 +1,10 @@
-// Define a Set to store processed emails
-const processedEmails = new Set();
-
 window.function = async function(url, pwd, email) {
     if (url.value === undefined) return undefined;
     if (email.value === undefined) return "Enter your Email";
     if (pwd.value === undefined) return undefined;
 
-    const webhook = url.value;
+    let webhook = url.value;
     const ch = email.value;
-
-    // Check if email has already been processed
-    if (processedEmails.has(ch)) {
-        return "Data already processed"; // Return a message indicating data has been processed
-    }
-
     const raw = JSON.stringify({
         params: {
             pwd: pwd.value,
@@ -22,7 +13,7 @@ window.function = async function(url, pwd, email) {
     });
 
     // Append the password as a query parameter to the webhook URL
-    const webhookWithPwd = `${webhook}?pwd=${encodeURIComponent(pwd.value)}`;
+    webhook += `?pwd=${encodeURIComponent(pwd.value)}`;
 
     const requestOptions = {
         method: 'POST',
@@ -33,13 +24,20 @@ window.function = async function(url, pwd, email) {
         redirect: 'follow'
     };
 
-    const response = await fetch(webhookWithPwd, requestOptions);
+    // Check if webhook has already been triggered
+    if (!window.function.webhookTriggered) {
+        // Set flag to indicate webhook has been triggered
+        window.function.webhookTriggered = true;
 
-    // Read the response body as plain text
-    const data = await response.text();
+        // Make the API call
+        const response = await fetch(`${webhook}`, requestOptions);
 
-    // Store the processed email to prevent processing it again
-    processedEmails.add(ch);
+        // Read the response body as plain text
+        const data = await response.text();
 
-    return data; // Return the plain text response
+        return data; // Return the plain text response
+    } else {
+        // Webhook already triggered, return a message indicating so
+        return "Webhook already triggered for this dataset.";
+    }
 };
