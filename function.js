@@ -12,7 +12,7 @@ window.function = async function(json) {
     
 
  await delay(5000);
-    return "Sending to webhook";
+    return "Sending to webhook ${webhook}";
     const requestOptions = {
         method: 'POST',
         body: JSON.stringify(requestBody),
