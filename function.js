@@ -10,7 +10,7 @@ window.function = async function(json) {
     // webhook += `?pwd=${encodeURIComponent(json.pwd)}`;
     // Check if webhook is a valid URL and if check is true
     if (!json.check) {
-        return json.check;
+        return json.check.value;
     }
 
  await delay(5000);
