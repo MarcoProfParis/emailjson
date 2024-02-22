@@ -38,7 +38,10 @@ if (obj.check === false) return "Waiting for check";
         // Make the API call
         console.log("Value of ${webhook}:", obj.webhook);
         const response = await fetch(obj.webhook, requestOptions);
-
+if (response.ok) {
+                // Reset webhook trigger if response is ok
+                window.function.webhookTriggered = false;
+            }
         // Read the response body as plain text
         const data = await response.text();
 
