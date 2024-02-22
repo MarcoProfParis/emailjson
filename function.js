@@ -12,9 +12,7 @@ let obj = JSON.parse(json.value);
 if (obj.check === false) return "Waiting for check";
     let url = obj.webhook;
     console.log("Value of obj.webhook:", obj.webhook);
-    const requestBody = {
-        params: json
-    };
+    const requestBody = json;
 
     // Append the password as a query parameter to the webhook URL
     // webhook += `?pwd=${encodeURIComponent(json.pwd)}`;
