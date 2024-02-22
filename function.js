@@ -1,6 +1,6 @@
 window.function = async function(json) {
     // Any asynchronous operations can be awaited here if needed
-    return json.value;
+    return json.webhook.value;
 };
 
 (async () => {
