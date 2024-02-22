@@ -1,7 +1,7 @@
 window.function = async function(json) {
+const obj = JSON.parse(json);
 
-
-    let webhook = json.webhook;
+    let webhook = obj.webhook;
     const requestBody = {
         params: json
     };
