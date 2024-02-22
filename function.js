@@ -1,5 +1,5 @@
 window.function = async function(json) {
-    let test = json.value;
+    let test = JSON.parse(json.value);
     console.log("Value of json.webhook:", test);
     let url = test.webhook;
     return url;
