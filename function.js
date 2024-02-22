@@ -1,6 +1,8 @@
 window.function = async function(json) {
     let url = JSON.parse(json);
-    return url.value;
+    let test = url.webhook;
+    let result = JSON.stringify(test);
+    return result.value;
 };
 
 
