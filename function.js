@@ -1,6 +1,6 @@
 window.function = async function(json) {
    
-    return "Done " ;
+    return "Done "+json.value ;
 };
 
 
