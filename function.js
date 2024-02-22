@@ -1,6 +1,7 @@
 window.function = async function(json) {
     // Any asynchronous operations can be awaited here if needed
-    return json.webhook.value;
+    const obj = JSON.parse(json);
+    return obj.webhook.value;
 };
 
 (async () => {
