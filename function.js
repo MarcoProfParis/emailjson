@@ -1,7 +1,7 @@
 window.function = async function(json) {
     try {
         // Parse JSON string
-        const obj = json;
+        const obj = JSON.parse(json.value);
 
         // Check if the JSON object has the `webhook` property
         if (!obj || !obj.webhook) {
