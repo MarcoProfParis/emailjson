@@ -1,22 +1,19 @@
 window.function = async function(json) {
     // Check if json parameter is provided and contains the required fields
-    if (!json || !json.1 || !json.2 || !json.3) return "Invalid JSON input";
+    if (!json ) return "Invalid JSON input";
 
-    let webhook = json.1;
-    const ch = json.3;
-    const raw = JSON.stringify({
-        params: {
-            pwd: json.2,
-            email: ch
-        }
-    });
+    let webhook = json.webhook;
+    const requestBody = {
+        params: json
+    };
 
     // Append the password as a query parameter to the webhook URL
-    webhook += `?pwd=${encodeURIComponent(json.2)}`;
-
+    // webhook += `?pwd=${encodeURIComponent(json.pwd)}`;
+ await delay(5000);
+    return "Sending to webhook";
     const requestOptions = {
         method: 'POST',
-        body: raw,
+        body: JSON.stringify(requestBody),
         headers: {
             'Content-Type': 'application/json'
         },
