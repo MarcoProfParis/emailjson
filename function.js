@@ -1,6 +1,6 @@
 window.function = async function(json) {
     let test = json.value;
-    console.log("Value of json.webhook:", test.webhook);
+    console.log("Value of json.webhook:", test);
     let url = test.webhook;
     return url;
 };
