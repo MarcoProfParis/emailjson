@@ -1,5 +1,5 @@
 window.function = async function(json) {
-    let url = json.webhook.value;
+    let url = json.webhook;
     return url;
 };
 
