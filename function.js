@@ -1,7 +1,13 @@
 window.function = async function(json) {
-    const obj = JSON.stringify(json);
-    return "Done";
+    // Any asynchronous operations can be awaited here if needed
+    return json;
 };
+
+(async () => {
+    // Immediately invoke the function with an empty JSON object
+    const result = await window.function({});
+    console.log(result); // Output: {}
+})();
 window.function2 = async function(json) {
 const obj = JSON.parse(json);
 
