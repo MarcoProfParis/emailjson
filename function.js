@@ -21,8 +21,8 @@ if (obj.check === false) return "Waiting for check";
     // Check if webhook is a valid URL and if check is true
     
 
- await delay(5000);
-    return url;
+let webhook = url.value;
+    console.log("Value of webhook:", webhook);
     const requestOptions = {
         method: 'POST',
         body: JSON.stringify(requestBody),
@@ -38,7 +38,8 @@ if (obj.check === false) return "Waiting for check";
         window.function.webhookTriggered = true;
 
         // Make the API call
-        const response = await fetch(url.value, requestOptions);
+        console.log("Value of ${webhook}:", `${webhook}`);
+        const response = await fetch(`${webhook}`, requestOptions);
 
         // Read the response body as plain text
         const data = await response.text();
