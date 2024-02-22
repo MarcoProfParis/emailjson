@@ -1,6 +1,28 @@
 window.function = async function(json) {
-   let obj = json.webhook;
-    return "Done3 "+obj.value ;
+    try {
+        // Parse JSON string
+        const obj = JSON.parse(json);
+
+        // Check if the JSON object has the `webhook` property
+        if (!obj || !obj.webhook) {
+            throw new Error('Invalid JSON format or missing "webhook" property');
+        }
+
+        // Retrieve the value from the `webhook` object
+        const value = obj.webhook.value;
+
+        // Check if `value` is undefined
+        if (typeof value === 'undefined') {
+            throw new Error('Value is undefined');
+        }
+
+        // Return the result
+        return "Done3 " + value;
+    } catch (error) {
+        // Handle any errors
+        console.error('Error:', error.message);
+        return 'Error occurred';
+    }
 };
 
 
