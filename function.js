@@ -1,6 +1,5 @@
 window.function = async function(json) {
-    // Check if json parameter is provided and contains the required fields
-    if (json.check === false ) return "check is false";
+
 
     let webhook = json.webhook;
     const requestBody = {
@@ -10,8 +9,8 @@ window.function = async function(json) {
     // Append the password as a query parameter to the webhook URL
     // webhook += `?pwd=${encodeURIComponent(json.pwd)}`;
     // Check if webhook is a valid URL and if check is true
-    if (!isValidUrl(webhook) || !json.check) {
-        return "Invalid webhook URL or check flag is not true";
+    if (!json.check) {
+        return "check is false";
     }
 
  await delay(5000);
