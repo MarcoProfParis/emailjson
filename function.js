@@ -1,4 +1,4 @@
-window.function = function(url, pwd, email) {
+window.function = async function(url, pwd, email) {
     if (url.value === undefined) return undefined;
     if (email.value === undefined) return "Enter your Email";
     if (pwd.value === undefined) return undefined;
